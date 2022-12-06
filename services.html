@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Ollie landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Travel Service | Memoravel</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.css">
+
+    <!-- Bootstrap + Ollie main styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
+</head>
+
+<body data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar navbar-light bg-light navbar-expand-lg fixed-top" data-spy="affix"
+        data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="assets/imgs/logo/logo.png" alt="" class="brand-img"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="trip.html">Trip</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#booking">
+                            Book Now
+                        </a>
+                    </li>
+                    <li class="nav-item ml-0 ml-lg-4">
+                        <a class="icon d-flex" href="signup.html">
+                            <div>
+                                <img src="assets/imgs/icons/user.png" alt="">
+                            </div>
+                            <div>
+                                <p>Log In</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Modal -->
+    <div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Book Now</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" id="name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" id="email">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="telephone">Telephone</label>
+                                    <input type="number" class="form-control" id="telephone">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="destination">Destination</label>
+                                    <input type="text" class="form-control" id="destination">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="trevelling">No. of Peoples Trevelling</label>
+                                    <input type="number" min="1" class="form-control" id="trevelling">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="dod">Date of Departure</label>
+                                    <input type="date" class="form-control" id="dod">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label for="doa">Date of Arrival</label>
+                                    <input type="date" class="form-control" id="doa">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="onbook()">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="py-5" style="background-color: #000;">
+            <h4 class="text-white ml-4">Cart</h4>
+        </div>
+
+        <div class="m-3">
+            <div><img src="assets/imgs/services/services1.webp" width="30%" alt=""></div>
+            <div>
+                <p class="p-0 m-0">Classic Ireland</p>
+                <p class="p-0 m-0">Adventure - 7 Days</p>
+                <p class="p-0 m-0">€35.00</p>
+                <input type="number" min="1" max="9999" value="1" class="control text-center">
+            </div>
+            <div class="mt-2">
+                <h4>Subtotal</br>
+                    €385.00</h4>
+            </div>
+            <hr>
+            <div>
+                <button
+                    style="width: 100%; background-color: black; color: white; border: none; outline: none; height: 40px;"><a
+                        href="view-cart.html" class="p-0 m-0" style="font-size: 16px;">View Cart</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <header class="header header-mini" style="background-image: url(assets/imgs/banner/banner3.jpg); height: 65vh;">
+        <div class="header-title text-white">Ireland Tours & Itineraries</div>
+    </header> <!-- End Of Page Header -->
+
+    <section class="section" id="about" style="background-color: #fff;">
+
+        <div class="container">
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="section-title text-center">Book a Service</h2>
+                </div>
+                <div class="col-lg-4 pt-3">
+                    <div>
+                        <a href="services-single.html">
+                            <div class="service-img">
+                                <img src="assets/imgs/services/services1.webp" alt="">
+                            </div>
+
+                            <div class="service-title">
+                                <p class="text-center p-0 m-0">Ultimate Ireland Road Trip</p>
+                            </div>
+                            <div class="service-charge">
+                                <p class="text-center p-0 m-0">€45.00</p>
+                            </div>
+                        </a>
+                        <div class="number">
+                            <span class="minus">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sgjacj_">
+                                    <path d="M20,12 L20,13 L5,13 L5,12 L20,12 Z" fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            <input type="text" value="1" />
+                            <span class="plus"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                                    class="sgjacj_">
+                                    <path
+                                        d="M13,5 L13,12 L20,12 L20,13 L13,13 L13,20 L12,20 L11.999,13 L5,13 L5,12 L12,12 L12,5 L13,5 Z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-btn">
+                            <button onclick="openNav()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pt-3">
+                    <div>
+                        <a href="services-single.html">
+                            <div class="service-img">
+                                <img src="assets/imgs/services/services2.webp" alt="">
+                            </div>
+                            <div class="service-title">
+                                <p class="text-center p-0 m-0">Classic Ireland Adventure - 7 Days</p>
+                            </div>
+                            <div class="service-charge">
+                                <p class="text-center p-0 m-0">€35.00</p>
+                            </div>
+                        </a>
+                        <div class="number">
+                            <span class="minus">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sgjacj_">
+                                    <path d="M20,12 L20,13 L5,13 L5,12 L20,12 Z" fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            <input type="text" value="1" />
+                            <span class="plus"><svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"
+                                    class="sgjacj_">
+                                    <path
+                                        d="M13,5 L13,12 L20,12 L20,13 L13,13 L13,20 L12,20 L11.999,13 L5,13 L5,12 L12,12 L12,5 L13,5 Z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-btn">
+                            <button onclick="openNav()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 pt-3">
+                    <div>
+                        <a href="services-single.html">
+                            <div class="service-img">
+                                <img src="assets/imgs/services/services3.webp" alt="">
+                            </div>
+                            <div class="service-title">
+                                <p class="text-center p-0 m-0">South Ireland Scenic Road Trip - 8 Days</p>
+                            </div>
+                            <div class="service-charge">
+                                <p class="text-center p-0 m-0">€40.00</p>
+                            </div>
+                        </a>
+                        <div class="number">
+                            <span class="minus">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sgjacj_">
+                                    <path d="M20,12 L20,13 L5,13 L5,12 L20,12 Z" fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                            <input type="text" value="1" />
+                            <span class="plus">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="sgjacj_">
+                                    <path
+                                        d="M13,5 L13,12 L20,12 L20,13 L13,13 L13,20 L12,20 L11.999,13 L5,13 L5,12 L12,12 L12,5 L13,5 Z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="service-btn">
+                            <button onclick="openNav()">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section class="section my-3" id="about" style="background-color: #EFE9E6;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12 py-5">
+                    <h2 class="section-title text-center">Ireland Travel Advice</h2>
+                </div>
+                <div class="col-lg-5">
+                    <div style="border: 1px solid gray;">
+                        <div class="">
+                            <img src="assets/imgs/services/services4.webp" width="100%" alt="">
+                        </div>
+                        <div class="pr-3 pl-3 pt-4 pb-4">
+                            <h4>Family Adventure in Ireland - 7 Days</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div style="border: 1px solid gray;">
+                        <div class="">
+                            <img src="assets/imgs/services/services5.webp" width="100%" alt="">
+                        </div>
+                        <div class="pr-3 pl-3 pt-4 pb-4">
+                            <h4>5 Unique Itinerary Idea</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <div class="container">
+        <div class="row py-3">
+            <div class="col-lg-12 text-center">
+                <div class="social-links">
+                    <a href="javascript:void(0)" class="text-dark"><i class="ti-instagram"></i></a>
+                    <a href="javascript:void(0)" class="text-dark"><i class="ti-facebook"></i></a>
+                    <a href="javascript:void(0)" class="text-dark"><i class="ti-twitter-alt"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="background-color: #EFE9E6;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="my-3 text-center">
+                        <script>document.write(new Date().getFullYear())</script> &copy; <a target="_blank"
+                            href="http://www.devcrud.com">Memoravel</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Owl carousel  -->
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.js"></script>
+
+
+    <!-- Ollie js -->
+    <script src="assets/js/Ollie.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            rtl: true,
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        function onbook() {
+            alert('congratulations! Happy Journey.');
+        }
+    </script>
+</body>
+
+</html>

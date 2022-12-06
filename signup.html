@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with Ollie landing page.">
+    <meta name="author" content="Devcrud">
+    <title>Travel Sign Up | Memoravel</title>
+
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.carousel.css">
+    <link rel="stylesheet" href="assets/vendors/owl-carousel/css/owl.theme.default.css">
+
+    <!-- Bootstrap + Ollie main styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
+
+</head>
+
+<body data-offset="40" id="home">
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="py-5" style="background-color: #000;">
+            <h4 class="text-white ml-4">Cart</h4>
+        </div>
+
+        <div class="m-3">
+            <div><img src="assets/imgs/services/services1.webp" width="30%" alt=""></div>
+            <div>
+                <p class="p-0 m-0">Classic Ireland</p>
+                <p class="p-0 m-0">Adventure - 7 Days</p>
+                <p class="p-0 m-0">€35.00</p>
+                <input type="number" min="1" max="9999" value="1" class="control text-center">
+            </div>
+            <div class="mt-2">
+                <h4>Subtotal</br>
+                    €385.00</h4>
+            </div>
+            <hr>
+            <div>
+                <button
+                    style="width: 100%; background-color: black; color: white; border: none; outline: none; height: 40px;"><a
+                        href="view-cart.html" class="p-0 m-0" style="font-size: 16px;">View Cart</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <div class="col-lg-3">
+                <h1 class="text-center">Sign Up</h1>
+                <p class="text-center">Already a member? Log In</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-12">
+                        <button
+                            style="width: 100%; background-color: #3B5998; color: white; height: 40px; outline: none; border: none;">
+                            <img src="assets/imgs/icons/facebook1.png" width="10%" alt=""> Sign up with Facebook
+                        </button>
+                    </div>
+                    <div class="col-lg-12 my-2">
+                        <button
+                            style="width: 100%; background-color: #4285F4; color: white; height: 40px; outline: none; border: none;">
+                            <img src="assets/imgs/icons/google.png" width="10%" alt=""> &nbsp;&nbsp;&nbsp; Sign up with
+                            Google
+                        </button>
+                    </div>
+                    <div class="col-lg-12 my-2">
+                        <div><span
+                                style="border-top: 1px solid gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>or<span
+                                style="border-top: 1px solid gray;">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 my-2">
+                        <button
+                            style="width: 100%; background-color: #fff; color: #000; height: 40px; outline: none; border: 1px solid gray;">
+                            Sign up with
+                            Email
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- core  -->
+    <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+    <script src="assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Owl carousel  -->
+    <script src="assets/vendors/owl-carousel/js/owl.carousel.js"></script>
+
+
+    <!-- Ollie js -->
+    <script src="assets/js/Ollie.js"></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+            rtl: true,
+            loop: true,
+            margin: 10,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 1
+                }
+            }
+        })
+
+    </script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "350px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
